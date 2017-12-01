@@ -28,14 +28,9 @@ package.json中包含了项目的一些基本信息、依赖包等内容。通�
   },
 ```
 
-例：
-``` --bush
-$ npm run dev
-```
-等同于
-``` --bush
-$ webpack-dev-server --inline --progress --config build/webpack.dev.conf.js
-```
+例：执行 ``` $ npm run dev ``` 等同于 ``` $ webpack-dev-server --inline --progress --config build/webpack.dev.conf.js ```
+
+#### 脚本分析：
 
 - 执行脚本 ``` $ npm run dev ``` 将会启动[webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html)并传入三个配置``` --inline 、--progress 、--config build/webpack.dev.conf.js ```
   - [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html)：基于node.js、express的服务器，用于 **运行开发环境**
