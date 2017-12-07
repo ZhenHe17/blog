@@ -39,8 +39,9 @@
 ```
 var path = require("path");
 module.exports = {
+  context: path.resolve(__dirname, '../'), 
   entry: {
-    app: ["./app/main.js"]
+    app: './src/main.js'
   },
   output: {
     path: path.resolve(__dirname, "build"),
