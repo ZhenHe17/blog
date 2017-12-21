@@ -1,4 +1,4 @@
-# 学习vue-webpack模板：一、从package.json开始
+# 逐行学习vue-webpack模板：一、从package.json开始
 
 package.json中包含了项目的一些基本信息、依赖包等内容。通过package.json，我们可以清楚的了解项目及其中使用的技术栈。下面将逐行分析[模板中的package.json](https://github.com/ZhenHe17/blog/blob/master/example/vue-webpack-boilerplate/chapter1/package-init-by-vue-cli.json)，并和[npm init --y生成的package.json](https://github.com/ZhenHe17/blog/blob/master/example/vue-webpack-boilerplate/chapter1/package-init-by-npm5.5.1.json)做对比。想了解package.json中每个字段的详细内容，可以参考官方文档[package.json](https://docs.npmjs.com/files/package.json)。
 
@@ -56,7 +56,7 @@ package.json中包含了项目的一些基本信息、依赖包等内容。通�
 
 ### 第 16 ~ 49 行
 
-这里指定了项目开发时的依赖包和版本，这些依赖包主要用于项目的构建及开发环境的配置等，且**不会被部署到生产环境**。
+这里指定了项目开发时的依赖包和版本，这些依赖包主要用于项目的构建、打包及开发环境等，**不会被部署到生产环境**。
 <!--因源码较长，不再粘贴。但这些依赖包用于，所以将逐个进行初步的介绍和认识。
 
 * [autoprefixer](https://github.com/postcss/autoprefixer)
@@ -124,7 +124,7 @@ package.json中包含了项目的一些基本信息、依赖包等内容。通�
 
 通过逐行分析package.json，我们发现package.json就像顺藤摸瓜里的藤，帮助我们从源头探索整个工程。
 
-下一章：[搭建开发环境](https://github.com/ZhenHe17/blog/blob/master/example/vue-webpack-boilerplate/docs/CHAPTER2.md)
+下一章：[开发环境的配置](https://github.com/ZhenHe17/blog/blob/master/example/vue-webpack-boilerplate/docs/CHAPTER2.md)
 
 ## 参考文档
 
