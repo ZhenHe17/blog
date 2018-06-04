@@ -55,3 +55,6 @@
 
 3.7：
 > 每个 Promise 实例(不是 Promise API 命名空间)都有 then(..) 和 catch(..) 方法，通过 这两个方法可以为这个 Promise 注册完成和拒绝处理函数。Promise 决议之后，立即会调用 这两个处理函数之一，但不会两个都调用，而且总是异步调用
+
+#### 读书笔记
+[《你不知道的javascript》](https://github.com/getify/You-Dont-Know-JS)对js的一些规范、行为、常见名词等有深入且易懂的讲解。对于开发人员来说，不论是否遇见书中的场景，都能得到对js更好的认识和巩固。
