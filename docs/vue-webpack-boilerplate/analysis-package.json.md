@@ -123,8 +123,7 @@ package.json中包含了项目的一些基本信息、依赖包等内容。通�
 
 通过逐行分析package.json，我们发现package.json就像顺藤摸瓜里的藤，帮助我们从源头探索整个工程。
 
-下一章：[开发环境的配置](https://github.com/ZhenHe17/blog/blob/master/example/vue-webpack-boilerplate/docs/CHAPTER2.md)
-<!-- 
+<!-- 下一章：[开发环境的配置](https://github.com/ZhenHe17/blog/blob/master/example/vue-webpack-boilerplate/docs/CHAPTER2.md) -->
 ## 参考文档
 
-[package.json | npm](https://docs.npmjs.com/files/package.json) -->
+[package.json | npm](https://docs.npmjs.com/files/package.json)
