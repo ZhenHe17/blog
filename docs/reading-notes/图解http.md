@@ -22,3 +22,9 @@
 > * URL 是 Uniform Resource Locator 的缩写。
 > * URI 用字符串标识某一互联网资源，而 URL表示资源的地点（互联网上所处的位置）。可见 URL是 URI 的子集。
 
+2.3：
+> HTTP 是一种不保存状态，即无状态（stateless）协议。在 HTTP 这个级别，协议对于发送过的请求或响应都不做持久化处理。
+
+2.7：
+> 持久连接（HTTP Persistent Connections，也称为 HTTP keep-alive 或HTTP connection reuse）的特点是，只要任意一端没有明确提出断开连接，则保持 TCP 连接状态。
+> 在 HTTP/1.1 中，所有的连接默认都是持久连接，但在 HTTP/1.0 内并未标准化。
