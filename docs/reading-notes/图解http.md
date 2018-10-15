@@ -28,3 +28,20 @@
 2.7：
 > 持久连接（HTTP Persistent Connections，也称为 HTTP keep-alive 或HTTP connection reuse）的特点是，只要任意一端没有明确提出断开连接，则保持 TCP 连接状态。
 > 在 HTTP/1.1 中，所有的连接默认都是持久连接，但在 HTTP/1.0 内并未标准化。
+
+7.2：
+> HTTPS 并非是应用层的一种新协议。只是 HTTP 通信接口部分用SSL（Secure Socket Layer）和 TLS（Transport Layer Security）协议代替而已。
+
+> 为了更好地理解 HTTPS，我们来观察一下 HTTPS 的通信步骤：
+> * 步骤 1： 客户端通过发送 Client Hello 报文开始 SSL通信。报文中包含客户端支持的 SSL的指定版本、加密组件（Cipher Suite）列表（所使用的加密算法及密钥长度等）。
+> * 步骤 2： 服务器可进行 SSL通信时，会以 Server Hello 报文作为应答。和客户端一样，在报文中包含 SSL版本以及加密组件。服务器的加密组件内容是从接收到的客户端加密组件内筛选出来的。
+> * 步骤 3： 之后服务器发送 Certificate 报文。报文中包含公开密钥证书。
+> * 步骤 4： 最后服务器发送 Server Hello Done 报文通知客户端，最初阶段的 SSL握手协商部分结束。
+> * 步骤 5： SSL第一次握手结束之后，客户端以 Client Key Exchange 报文作为回应。报文中包含通信加密中使用的一种被称为 Pre-mastersecret 的随机密码串。该报文已用步骤 3 中的公开密钥进行加密。
+> * 步骤 6： 接着客户端继续发送 Change Cipher Spec 报文。该报文会提示服务器，在此报文之后的通信会采用 Pre-master secret 密钥加密。
+> * 步骤 7： 客户端发送 Finished 报文。该报文包含连接至今全部报文的整体校验值。这次握手协商是否能够成功，要以服务器是否能够正确解密该报文作为判定标准。
+> * 步骤 8： 服务器同样发送 Change Cipher Spec 报文。
+> * 步骤 9： 服务器同样发送 Finished 报文。
+> * 步骤 10： 服务器和客户端的 Finished 报文交换完毕之后，SSL连接就算建立完成。当然，通信会受到 SSL的保护。从此处开始进行应用层协议的通信，即发送 HTTP 请求。
+> * 步骤 11： 应用层协议通信，即发送 HTTP 响应。
+> * 步骤 12： 最后由客户端断开连接。断开连接时，发送 close_notify 报文。这步之后再发送 TCP FIN 报文来关闭与 TCP的通信。
