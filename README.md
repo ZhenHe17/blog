@@ -4,6 +4,7 @@
 
 ## 目录
 
+* [[源码分析] canvas 实现缩放和拖拽](https://github.com/ZhenHe17/blog/issues/13) -- 2019 / 4 / 8
 * [归纳JavaScript事件循环（event loop）](https://github.com/ZhenHe17/blog/issues/12) -- 2018 / 11 / 26
 * [对 基于webpack的单页应用 进行性能优化的几种方式](https://github.com/ZhenHe17/blog/issues/11) -- 2018 / 9 / 28
 * [项目总结：构建和开发基于preact技术栈的移动端工程](https://github.com/ZhenHe17/blog/issues/10) -- 2018 / 5 / 30
